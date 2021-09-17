@@ -1,0 +1,814 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+/* loader */
+.loader,
+.loader:before,
+.loader:after {
+	background: transparent;
+	-webkit-animation: load1 1s infinite ease-in-out;
+	animation: load1 1s infinite ease-in-out;
+	width: 1em;
+	height: 4em;
+}
+.loader {
+	min-height: 100vh;
+	color: red;
+	text-indent: -9999em;
+	margin: 88px auto;
+	margin-top: 20rem;
+	position: relative;
+	font-size: 3rem;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+	position: absolute;
+	top: 0;
+	content: '';
+}
+.loader:before {
+	left: -1.5em;
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+.loader:after {
+	left: 1.5em;
+}
+@-webkit-keyframes load1 {
+	0%,
+	80%,
+	100% {
+		box-shadow: 0 0;
+		height: 4em;
+	}
+	40% {
+		box-shadow: 0 -2em;
+		height: 5em;
+	}
+}
+@keyframes load1 {
+	0%,
+	80%,
+	100% {
+		box-shadow: 0 0;
+		height: 4em;
+	}
+	40% {
+		box-shadow: 0 -2em;
+		height: 5em;
+	}
+}
+
+/* navbar */
+
+nav {
+	background-color: black;
+	display: flex;
+	height: 5vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.icon-container {
+	width: 20%;
+}
+
+.icon {
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 2rem;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+li {
+	list-style: none;
+	font-weight: bold;
+}
+li:hover {
+	color: red;
+}
+a {
+	text-decoration: none;
+	color: #f1f5f8;
+}
+
+.shopping-bag-cont {
+	width: 5%;
+	position: relative;
+}
+
+.shopping-bag {
+	min-width: 100%;
+	min-height: 100%;
+	color: white;
+}
+
+.amount-container {
+	position: absolute;
+	top: 0.05rem;
+	right: 1rem;
+	width: 1.75rem;
+	height: 1.75rem;
+	border-radius: 50%;
+
+	background: yellow;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hamburger {
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	border: 0px;
+	cursor: pointer;
+	margin-right: 3%;
+}
+.hamburger svg {
+	font-size: 2rem;
+}
+
+/* home page */
+
+.container {
+	min-height: 95vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+}
+.first-image {
+	background-image: url('../images/loona1.jpg');
+}
+.second-image {
+	background-image: url('../images/loona2.jpg');
+}
+.third-image {
+	background-image: url('../images/loona3.jpg');
+}
+.center {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.welcome-text {
+	color: yellow;
+	font-size: 1.5rem;
+	font-weight: bold;
+	border-radius: 10px;
+	text-align: center;
+	width: 50%;
+}
+.welcome-btn {
+	background: transparent;
+	font-size: 5rem;
+	border: none;
+	color: white;
+}
+
+/*sidebar*/
+
+.sidebar-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	place-items: center;
+	visibility: hidden;
+	z-index: -1;
+	transition: none;
+
+	transform: scale(0);
+	background: rgba(0, 0, 0, 0.5);
+}
+.sidebar-wrapper.show {
+	transition: all 0.3s linear;
+	visibility: visible;
+	z-index: 2;
+	transform: scale(1);
+}
+
+.sidebar {
+	width: 90vw;
+	height: 95vh;
+	max-width: 620px;
+	background: grey;
+	border-radius: 2rem;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	position: relative;
+	padding: 4rem 2rem;
+}
+
+.close-btn {
+	font-size: 2rem;
+	background: transparent;
+	border-color: transparent;
+	color: red;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	cursor: pointer;
+}
+
+.side-bar-links {
+	min-height: 33vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.side-bar-links li {
+	color: yellow;
+}
+
+/*shop*/
+.albums-container {
+	margin-top: 4vh;
+	padding: 10px 0px 10px 0px;
+	background-color: gray;
+	text-align: center;
+	min-height: 90vh;
+}
+.albums-container h1 {
+	color: yellow;
+	padding: 0.3rem;
+}
+.albums {
+	display: grid;
+	grid-gap: 10px;
+}
+.album-container {
+	align-items: center;
+	background-color: white;
+	border-radius: 10px;
+
+	display: flex;
+	flex-direction: column;
+}
+.album-img {
+	max-width: 90%;
+	border-radius: 2rem;
+	padding: 1rem 1rem 0rem 1rem;
+}
+.album-btn {
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	font-weight: bold;
+	color: white;
+	padding: 0.1rem 0.2rem;
+	cursor: pointer;
+	font-size: 0.8rem;
+	border-radius: 5px;
+	width: 30%;
+	margin: 0.2rem;
+}
+.details {
+	background-color: red;
+}
+.buy {
+	background-color: rgb(214, 214, 22);
+}
+
+/* single album details */
+
+.detail-main {
+	min-height: 95vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: grey;
+}
+.detail-container {
+	max-width: 50%;
+	background-color: white;
+	padding: 0.5em;
+	border-radius: 2rem;
+}
+.detail-image-container {
+	display: flex;
+	justify-content: center;
+}
+.detail-text {
+	font-size: 0.7em;
+}
+.detail-img {
+	max-width: 70%;
+	padding: 1rem;
+	border-radius: 2rem;
+}
+
+.basic-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	font-size: 1.5em;
+}
+.album-text {
+	font-size: 1.3em;
+	line-height: 2em;
+	text-align: justify;
+}
+/* members */
+.members-info-main {
+	height: 90vh;
+	margin-top: 5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: grey;
+}
+.container-with-buttons {
+	display: flex;
+	justify-content: space-around;
+	overflow: hidden;
+	position: relative;
+}
+.active-slide {
+	opacity: 1;
+	transform: translateX(0);
+}
+.last-slide {
+	opacity: 0;
+	position: absolute;
+	transform: translateX(300%);
+}
+.next-slide {
+	opacity: 0;
+	position: absolute;
+	transform: translateX(-300%);
+}
+
+.members-info-container {
+	transition: all 0.7s linear;
+	background-color: white;
+}
+.members-image-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.members-image {
+	padding: 0.1rem 0.1rem 0.1rem 0.1rem;
+	border-radius: 10rem;
+}
+.members-text {
+	display: flex;
+}
+.members-left {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+}
+.members-right {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+}
+.members-left-text {
+	color: black;
+	font-weight: bold;
+}
+.members-right-text {
+	color: red;
+	font-weight: bold;
+}
+
+/* songs */
+.songs-container {
+	min-height: 95vh;
+	margin-top: 5vh;
+	display: grid;
+	grid-gap: 1rem;
+	background-color: grey;
+}
+.song-container {
+	background-color: white;
+}
+.songs-inside-container {
+	/*just for margin*/
+	margin: 1rem;
+}
+.songs-image-container img {
+	min-height: 100%;
+	padding: 0.2rem;
+	border-radius: 1rem;
+}
+.song-container {
+	display: flex;
+	justify-content: space-around;
+}
+.song-text-audio-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+audio {
+	max-width: 80%;
+}
+
+/* checkout */
+.your-bag {
+	min-height: 90vh;
+	margin-top: 5vh;
+	background-color: grey;
+}
+.your-bag-h1-cont-container {
+	min-height: 5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.your-bag-h1-cont {
+	text-align: center;
+	background-color: white;
+	color: black;
+
+	border-radius: 2rem;
+}
+.cart {
+	display: flex;
+	justify-content: center;
+	background-color: grey;
+}
+.button-container-bag {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+}
+.delete-your-bag {
+	background-color: red;
+	color: white;
+	border-radius: 1rem;
+	border: none;
+	padding: 0.5rem;
+}
+.total-and-price {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+.total-and-price p {
+	color: white;
+}
+.single-item-container {
+	display: grid;
+	margin: 0.4rem;
+	background-color: white;
+	border-radius: 1rem;
+}
+.single-item-container img {
+	padding: 0.2rem;
+	border-radius: 1rem;
+}
+.single-item-image {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.single-item-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.single-item-text span {
+	font-weight: bold;
+}
+.remove-btn {
+	background-color: yellow;
+	border-radius: 1rem;
+	border: none;
+	padding: 0.2rem;
+}
+.single-item-inc-dec {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.single-item-inc-dec svg {
+	color: red;
+}
+/* footer */
+
+footer {
+	height: 5vh;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer-icon-container {
+	height: 5vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.footer-icon-container a {
+	display: flex;
+	align-items: center;
+}
+.footer-icon-container svg {
+	background-color: white;
+	color: black;
+	font-size: 2rem;
+}
+.social:hover {
+	background-color: red;
+}
+
+@media screen and (min-width: 100px) {
+	/* navbar */
+	nav {
+		justify-content: space-between;
+	}
+	nav ul {
+		display: none;
+	}
+	.shopping-bag-cont {
+		display: none;
+	}
+
+	/* shop */
+	.albums {
+		grid-template-columns: 1fr;
+	}
+	.album-container {
+		margin: 0rem 1rem 0rem 1rem;
+	}
+	/* single album details */
+	.detail-container {
+		min-width: 95%;
+		min-height: 80vh;
+	}
+	/* members */
+	.container-with-buttons {
+		width: 96%;
+	}
+	.members-info-btn {
+		font-size: 4rem;
+	}
+	.members-info-container {
+		max-width: 68%;
+	}
+	.members-image-container {
+		height: 15vh;
+		margin-bottom: 0.5rem;
+	}
+
+	/* checkout */
+	.your-bag-h1-cont {
+		width: 40%;
+	}
+	.bag-items-container {
+		width: 95%;
+	}
+	.single-item-container {
+		grid-template-columns: 2fr 3fr 1fr;
+	}
+	.single-item-container img {
+		max-width: 95%;
+	}
+	.single-item-text * {
+		margin: 0.3rem;
+		padding: 0.2rem;
+	}
+
+	/* footer */
+	.footer-icon-container {
+		width: 32%;
+	}
+}
+
+@media screen and (min-width: 400px) {
+}
+
+/* tablets */
+@media screen and (min-width: 650px) {
+	/* navbar */
+	nav {
+		justify-content: space-around;
+	}
+	nav ul {
+		display: flex;
+		width: 50%;
+	}
+	.shopping-bag-cont {
+		display: block;
+	}
+	.shopping-bag {
+		min-width: 130%;
+	}
+	.amount-container {
+		top: 0.05rem;
+		left: 0.9rem;
+	}
+	.hamburger {
+		display: none;
+	}
+	/* members */
+	.container-with-buttons {
+		width: 72%;
+	}
+
+	.members-info-container {
+		min-width: 71%;
+	}
+	.members-image-container {
+		height: 17vh;
+	}
+	/* songs */
+	.songs-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	/* footer */
+	.footer-icon-container {
+		width: 20%;
+	}
+}
+
+@media screen and (min-width: 750px) {
+	/* navbar */
+	.amount-container {
+		top: 0.05rem;
+
+		left: 1.3rem;
+	}
+	/* shop */
+	.albums {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.album-container {
+		margin: 0rem;
+	}
+	/* single album details */
+	.detail-container {
+		min-width: 50%;
+		min-height: 65vh;
+	}
+	/* members */
+	.container-with-buttons {
+		width: 70%;
+	}
+
+	.members-info-container {
+		min-width: 67%;
+	}
+	.members-image-container {
+		height: 19vh;
+	}
+	/* checkout */
+	.bag-items-container {
+		width: 80%;
+	}
+}
+
+/* laptops */
+
+@media screen and (min-width: 950px) {
+	/* navbar */
+	nav ul {
+		width: 40%;
+	}
+	.shopping-bag {
+		min-width: 100%;
+	}
+	.amount-container {
+		top: 0.05rem;
+		left: 1.6rem;
+	}
+	/* members */
+	.container-with-buttons {
+		width: 70%;
+	}
+	.members-image-container {
+		height: 22vh;
+		margin-bottom: 1.3rem;
+	}
+}
+/* desktops */
+@media screen and (min-width: 1140px) {
+	/* navbar */
+	.amount-container {
+		top: 0.05rem;
+		left: 1.5rem;
+	}
+	nav ul {
+		width: 30%;
+	}
+	/* shop */
+	.albums {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	/* single album details */
+	.detail-container {
+		min-width: 43%;
+	}
+	/* members */
+	.container-with-buttons {
+		width: 45%;
+	}
+	/* checkout */
+	.bag-items-container {
+		width: 70%;
+	}
+}
+@media screen and (min-width: 1240px) {
+	/* navbar */
+	.amount-container {
+		top: 0.05rem;
+		left: 1.6rem;
+	}
+	/* songs */
+	.songs-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media screen and (min-width: 1400px) {
+	/* navbar */
+	.amount-container {
+		top: 0.05rem;
+		left: 1.9rem;
+	}
+	/* members */
+	.container-with-buttons {
+		width: 40%;
+	}
+	.members-info-container {
+		min-width: 70%;
+	}
+	/* shop */
+	.albums {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	/* checkout */
+	.bag-items-container {
+		width: 60%;
+	}
+	/* footer */
+	.footer-icon-container {
+		width: 15%;
+	}
+	.detail-container {
+		padding: 0.5em;
+		min-width: 30%;
+		max-width: 30%;
+		min-height: 65vh;
+	}
+}
+@media screen and (min-width: 1650px) {
+	/* navbar */
+	.amount-container {
+		top: 0.05rem;
+		left: 2.8rem;
+	}
+	/* songs */
+	.songs-container {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	/* checkout */
+	.single-item-container {
+		grid-template-columns: 2fr 2fr 1fr;
+	}
+	.single-item-container img {
+		max-width: 80%;
+	}
+	.single-item-text * {
+		margin: 0.3rem;
+	}
+}
