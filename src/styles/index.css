@@ -1,3 +1,23 @@
+/* 
+====== 
+Variables 
+======
+*/
+:root {
+	--welcomeText: red;
+	--welcomeBtn: white;
+	--socialLinks: black;
+	--socialLinksBackGround: white;
+	--socialLinksHover: red;
+	--amountContainer: orange;
+	--navbarLinks: white;
+	--navbarLinksHover: red;
+}
+/* 
+====== 
+Global Styles 
+======
+*/
 * {
 	margin: 0;
 	padding: 0;
@@ -111,11 +131,11 @@ li {
 	font-weight: bold;
 }
 li:hover {
-	color: red;
+	color: var(--navbarLinksHover);
 }
 a {
 	text-decoration: none;
-	color: #f1f5f8;
+	color: var(--navbarLinks);
 }
 
 .shopping-bag-cont {
@@ -137,7 +157,7 @@ a {
 	height: 1.75rem;
 	border-radius: 50%;
 
-	background: yellow;
+	background: var(--amountContainer);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -168,13 +188,13 @@ a {
 	align-items: center;
 }
 .first-image {
-	background-image: url('../images/loona1.jpg');
+	background-image: url('../images/rammstein1.jpg');
 }
 .second-image {
-	background-image: url('../images/loona2.jpg');
+	background-image: url('../images/rammstein2.jpg');
 }
 .third-image {
-	background-image: url('../images/loona3.jpg');
+	background-image: url('../images/rammstein3.jpg');
 }
 .center {
 	width: 100%;
@@ -182,7 +202,7 @@ a {
 	justify-content: space-around;
 }
 .welcome-text {
-	color: yellow;
+	color: var(--welcomeText);
 	font-size: 1.5rem;
 	font-weight: bold;
 	border-radius: 10px;
@@ -193,7 +213,7 @@ a {
 	background: transparent;
 	font-size: 5rem;
 	border: none;
-	color: white;
+	color: var(--welcomeBtn);
 }
 
 /*sidebar*/
@@ -543,12 +563,12 @@ footer {
 	align-items: center;
 }
 .footer-icon-container svg {
-	background-color: white;
-	color: black;
+	background-color: var(--socialLinksBackGround);
+	color: var(--socialLinks);
 	font-size: 2rem;
 }
 .social:hover {
-	background-color: red;
+	background-color: var(--socialLinksHover);
 }
 
 @media screen and (min-width: 100px) {
