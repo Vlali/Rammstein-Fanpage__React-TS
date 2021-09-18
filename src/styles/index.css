@@ -5,6 +5,7 @@ Variables
 */
 :root {
 	--welcomeText: red;
+	--welcomeTextP: white;
 	--welcomeBtn: white;
 	--loader: red;
 	--nav: black;
@@ -242,6 +243,9 @@ a {
 	border-radius: 10px;
 	text-align: center;
 	width: 50%;
+}
+.welcome-text p {
+	color: var(--welcomeTextP);
 }
 .welcome-btn {
 	background: transparent;

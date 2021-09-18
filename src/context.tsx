@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useReducer, useState } from 'react';
+import React, { useContext, useEffect, useReducer } from 'react';
 import reducer from './reducer';
 import { IInitialState, IAlbumDataPlusAmount } from './types';
 

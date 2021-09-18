@@ -1,10 +1,4 @@
-import React from 'react';
-import {
-	IInitialState,
-	IAction,
-	IAlbumData,
-	IAlbumDataPlusAmount,
-} from './types';
+import { IInitialState, IAction, IAlbumDataPlusAmount } from './types';
 
 const reducer = (state: IInitialState, action: IAction) => {
 	switch (action.type) {

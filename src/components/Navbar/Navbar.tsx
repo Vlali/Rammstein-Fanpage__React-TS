@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
 	return (
 		<nav>
 			<div className="icon-container">
-				<a href="https://www.rammstein.de/en/" target="_blank">
+				<a href="https://www.rammstein.de/en/" target="_blank" rel="noreferrer">
 					<img src={icon} alt="" className="icon" />
 				</a>
 			</div>

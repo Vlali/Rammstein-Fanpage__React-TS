@@ -10,8 +10,8 @@ const HomeComp: React.FC = () => {
 					<AiOutlineArrowLeft className="svg " onClick={leftSlide} />
 				</button>
 				<div className="welcome-text">
-					<h1>WELCOME TO MY FIRST REACT TS WEBSITE</h1>
-					<p>Rammstein Fansite</p>
+					<h1>WELCOME TO MY FIRST </h1>
+					<p>REACT TS WEBSITE</p>
 				</div>
 				<button className="welcome-btn right" onClick={rightSlide}>
 					<AiOutlineArrowRight className="svg " />
