@@ -1,8 +1,7 @@
-import React from 'react';
 import BagItem from './BagItem';
 import { UseGlobalContext } from '../../context';
 import uniqid from 'uniqid';
-const YourBag = () => {
+const YourBag: React.FC = () => {
 	const { bag, total, deleteYourBag } = UseGlobalContext();
 	return (
 		<section className="your-bag">

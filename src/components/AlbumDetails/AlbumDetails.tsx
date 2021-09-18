@@ -1,10 +1,9 @@
-import React from 'react';
 import { UseGlobalContext } from '../../context';
 import { IAlbumData } from '../../types';
 import { useParams } from 'react-router';
 import uniqid from 'uniqid';
 
-const AlbumDetails = () => {
+const AlbumDetails: React.FC = () => {
 	const { albumData } = UseGlobalContext();
 	const { id } = useParams<{ id: any }>();
 

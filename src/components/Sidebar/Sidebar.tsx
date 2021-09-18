@@ -1,8 +1,7 @@
-import React from 'react';
 import { UseGlobalContext } from '../../context';
 import { AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
 	const { isSidebarOpen, closeSidebar } = UseGlobalContext();
 	return (
 		<aside

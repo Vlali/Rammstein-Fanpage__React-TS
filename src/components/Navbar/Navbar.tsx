@@ -1,4 +1,3 @@
-import React from 'react';
 import { GiHamburgerMenu, GiShoppingBag } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import icon from '../../images/icon.jpg';
@@ -9,7 +8,9 @@ const Navbar: React.FC = () => {
 	return (
 		<nav>
 			<div className="icon-container">
-				<img src={icon} alt="" className="icon" />
+				<a href="https://www.rammstein.de/en/" target="_blank">
+					<img src={icon} alt="" className="icon" />
+				</a>
 			</div>
 			<ul>
 				<Link to="/">

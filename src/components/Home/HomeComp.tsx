@@ -1,8 +1,7 @@
-import React from 'react';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import { UseGlobalContext } from '../../context';
 
-const HomeComp = () => {
+const HomeComp: React.FC = () => {
 	const { classNameImg, leftSlide, rightSlide } = UseGlobalContext();
 	return (
 		<section className={`container ${classNameImg}`}>

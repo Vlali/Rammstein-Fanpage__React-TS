@@ -1,4 +1,3 @@
-import React from 'react';
 import { UseGlobalContext } from '../../context';
 import SingleAlbum from './SingleAlbum';
 import Loading from '../Loading/Loading';
@@ -13,7 +12,7 @@ const Albums: React.FC = () => {
 	return (
 		<>
 			<section className="albums-container">
-				<h1>My albums</h1>
+				<h1>Studio Albums</h1>
 				<section className="albums">
 					{albumData.map((item: IAlbumData) => {
 						return <SingleAlbum key={item.id} {...item} />;

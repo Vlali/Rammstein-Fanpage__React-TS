@@ -1,7 +1,6 @@
-import React from 'react';
 import Albums from './Albums';
 
-const ShopComponent = () => {
+const ShopComponent: React.FC = () => {
 	return <Albums />;
 };
 

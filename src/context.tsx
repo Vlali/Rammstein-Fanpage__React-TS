@@ -15,7 +15,7 @@ const initialState: IInitialState = {
 	songs: [],
 	albumDataUrl: 'https://rammstein-data-api.herokuapp.com/albumData',
 	membersUrl: 'https://rammstein-data-api.herokuapp.com/memberDetails',
-	songsUrl: 'https://albumdata.herokuapp.com/results',
+	songsUrl: 'https://rammstein-data-api.herokuapp.com/results',
 	searchTerm: '',
 	rightSlide: () => {},
 	leftSlide: () => {},

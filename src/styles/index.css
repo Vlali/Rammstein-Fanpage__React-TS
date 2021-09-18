@@ -6,12 +6,46 @@ Variables
 :root {
 	--welcomeText: red;
 	--welcomeBtn: white;
+	--loader: red;
+	--nav: black;
+	--shoppingBag: white;
+	--hamburger: white;
+	--sidebarWrapper: rgba(0, 0, 0, 0.5);
+	--sidebarBackground: gray;
+	--sideBarColor: rgba(0, 0, 0, 0.2);
+	--closeBtn: red;
+	--sidebarLinks: yellow;
 	--socialLinks: black;
 	--socialLinksBackGround: white;
 	--socialLinksHover: red;
 	--amountContainer: orange;
 	--navbarLinks: white;
 	--navbarLinksHover: red;
+	--albumContainer: white;
+	--albumsContainer: gray;
+	--albumsContainerH1: black;
+	--albumBtnColor: white;
+	--albumBtnDetails: red;
+	--albumBtnBuy: rgb(214, 214, 22);
+	--singleAlbumDetailMain: gray;
+	--singleAlbumDetailContainer: white;
+	--membersInfoMain: gray;
+	--membersInfoContainer: white;
+	--membersLeftText: black;
+	--membersRightText: red;
+	--songsContainer: gray;
+	--songContainer: white;
+	--yourBag: gray;
+	--yourBagH1ContBackground: white;
+	--yourBagH1ContColor: black;
+	--cart: gray;
+	--deleteYourBagBackground: red;
+	--deleteYourBagColor: white;
+	--totalAndPrice: white;
+	--singleBagItemContainer: white;
+	--singleBagItemIncDec: red;
+	--removeBtn: yellow;
+	--footer: black;
 }
 /* 
 ====== 
@@ -50,7 +84,7 @@ code {
 }
 .loader {
 	min-height: 100vh;
-	color: red;
+	color: var(--loader);
 	text-indent: -9999em;
 	margin: 88px auto;
 	margin-top: 20rem;
@@ -104,7 +138,7 @@ code {
 /* navbar */
 
 nav {
-	background-color: black;
+	background-color: var(--nav);
 	display: flex;
 	height: 5vh;
 	position: fixed;
@@ -146,7 +180,7 @@ a {
 .shopping-bag {
 	min-width: 100%;
 	min-height: 100%;
-	color: white;
+	color: var(--shoppingBag);
 }
 
 .amount-container {
@@ -164,7 +198,7 @@ a {
 }
 
 .hamburger {
-	color: white;
+	color: var(--hamburger);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -231,7 +265,7 @@ a {
 	transition: none;
 
 	transform: scale(0);
-	background: rgba(0, 0, 0, 0.5);
+	background: var(--sidebarWrapper);
 }
 .sidebar-wrapper.show {
 	transition: all 0.3s linear;
@@ -244,9 +278,9 @@ a {
 	width: 90vw;
 	height: 95vh;
 	max-width: 620px;
-	background: grey;
+	background: var(--sidebarBackground);
 	border-radius: 2rem;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 15px var(--sideBarColor);
 	position: relative;
 	padding: 4rem 2rem;
 }
@@ -255,7 +289,7 @@ a {
 	font-size: 2rem;
 	background: transparent;
 	border-color: transparent;
-	color: red;
+	color: var(--closeBtn);
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
@@ -270,19 +304,19 @@ a {
 	align-items: center;
 }
 .side-bar-links li {
-	color: yellow;
+	color: var(--sidebarLinks);
 }
 
 /*shop*/
 .albums-container {
 	margin-top: 4vh;
 	padding: 10px 0px 10px 0px;
-	background-color: gray;
+	background-color: var(--albumsContainer);
 	text-align: center;
 	min-height: 90vh;
 }
 .albums-container h1 {
-	color: yellow;
+	color: var(--albumsContainerH1);
 	padding: 0.3rem;
 }
 .albums {
@@ -291,7 +325,7 @@ a {
 }
 .album-container {
 	align-items: center;
-	background-color: white;
+	background-color: var(--albumContainer);
 	border-radius: 10px;
 
 	display: flex;
@@ -306,7 +340,7 @@ a {
 	text-transform: uppercase;
 	letter-spacing: 0.3rem;
 	font-weight: bold;
-	color: white;
+	color: var(--albumBtnColor);
 	padding: 0.1rem 0.2rem;
 	cursor: pointer;
 	font-size: 0.8rem;
@@ -314,11 +348,15 @@ a {
 	width: 30%;
 	margin: 0.2rem;
 }
+.album-btn a {
+	display: inline-block;
+	min-width: 100%;
+}
 .details {
-	background-color: red;
+	background-color: var(--albumBtnDetails);
 }
 .buy {
-	background-color: rgb(214, 214, 22);
+	background-color: var(--albumBtnBuy);
 }
 
 /* single album details */
@@ -328,11 +366,11 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: grey;
+	background-color: var(--singleAlbumDetailMain);
 }
 .detail-container {
 	max-width: 50%;
-	background-color: white;
+	background-color: var(--singleAlbumDetailContainer);
 	padding: 0.5em;
 	border-radius: 2rem;
 }
@@ -368,7 +406,7 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: grey;
+	background-color: var(--membersInfoMain);
 }
 .container-with-buttons {
 	display: flex;
@@ -393,7 +431,7 @@ a {
 
 .members-info-container {
 	transition: all 0.7s linear;
-	background-color: white;
+	background-color: var(--membersInfoContainer);
 }
 .members-image-container {
 	width: 100%;
@@ -418,11 +456,11 @@ a {
 	justify-content: center;
 }
 .members-left-text {
-	color: black;
+	color: var(--membersLeftText);
 	font-weight: bold;
 }
 .members-right-text {
-	color: red;
+	color: var(--membersRightText);
 	font-weight: bold;
 }
 
@@ -432,10 +470,10 @@ a {
 	margin-top: 5vh;
 	display: grid;
 	grid-gap: 1rem;
-	background-color: grey;
+	background-color: var(--songsContainer);
 }
 .song-container {
-	background-color: white;
+	background-color: var(--songContainer);
 }
 .songs-inside-container {
 	/*just for margin*/
@@ -464,7 +502,7 @@ audio {
 .your-bag {
 	min-height: 90vh;
 	margin-top: 5vh;
-	background-color: grey;
+	background-color: var(--yourBag);
 }
 .your-bag-h1-cont-container {
 	min-height: 5vh;
@@ -474,15 +512,15 @@ audio {
 }
 .your-bag-h1-cont {
 	text-align: center;
-	background-color: white;
-	color: black;
+	background-color: var(--yourBagH1ContBackground);
+	color: var(--yourBagH1ContColor);
 
 	border-radius: 2rem;
 }
 .cart {
 	display: flex;
 	justify-content: center;
-	background-color: grey;
+	background-color: var(--cart);
 }
 .button-container-bag {
 	display: flex;
@@ -490,8 +528,8 @@ audio {
 	padding: 1rem;
 }
 .delete-your-bag {
-	background-color: red;
-	color: white;
+	background-color: var(--deleteYourBagBackground);
+	color: var(--deleteYourBagColor);
 	border-radius: 1rem;
 	border: none;
 	padding: 0.5rem;
@@ -502,12 +540,12 @@ audio {
 	padding: 1rem;
 }
 .total-and-price p {
-	color: white;
+	color: var(--totalAndPrice);
 }
 .single-item-container {
 	display: grid;
 	margin: 0.4rem;
-	background-color: white;
+	background-color: var(--singleBagItemContainer);
 	border-radius: 1rem;
 }
 .single-item-container img {
@@ -529,7 +567,7 @@ audio {
 	font-weight: bold;
 }
 .remove-btn {
-	background-color: yellow;
+	background-color: var(--removeBtn);
 	border-radius: 1rem;
 	border: none;
 	padding: 0.2rem;
@@ -541,13 +579,13 @@ audio {
 	align-items: center;
 }
 .single-item-inc-dec svg {
-	color: red;
+	color: var(--singleBagItemIncDec);
 }
 /* footer */
 
 footer {
 	height: 5vh;
-	background-color: black;
+	background-color: var(--footer);
 	display: flex;
 	justify-content: center;
 	align-items: center;

@@ -1,8 +1,14 @@
-import React from 'react';
 import { AiFillCaretUp, AiFillCaretDown } from 'react-icons/ai';
 import { UseGlobalContext } from '../../context';
+import { IAlbumDataPlusAmount } from '../../types';
 
-const BagItem = ({ albumName, img, price, amount, id }: any) => {
+const BagItem: React.FC<IAlbumDataPlusAmount> = ({
+	albumName,
+	img,
+	price,
+	amount,
+	id,
+}) => {
 	const { incAmount, decAmount, deleteAnItem } = UseGlobalContext();
 
 	return (

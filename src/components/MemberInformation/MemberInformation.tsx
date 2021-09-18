@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 
 import SingleMember from './SingleMember';
 import Loading from '../Loading/Loading';
 import { UseGlobalContext } from '../../context';
-const MemberInformation = () => {
+const MemberInformation: React.FC = () => {
 	const [index, setIndex] = useState(0);
 	const { loading, memberDetails } = UseGlobalContext();
 	const nextSlide = () => {

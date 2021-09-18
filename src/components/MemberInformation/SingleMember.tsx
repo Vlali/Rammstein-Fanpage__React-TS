@@ -1,4 +1,3 @@
-import React from 'react';
 import { ISingleMember } from '../../types';
 
 const SingleMember: React.FC<ISingleMember> = ({
@@ -37,6 +36,9 @@ const SingleMember: React.FC<ISingleMember> = ({
 						<br></br>
 						<p>Weight:</p>
 						<br></br>
+
+						<p>Spot on stage:</p>
+						<br></br>
 					</div>
 				</div>
 				<div className="members-right">
@@ -52,6 +54,9 @@ const SingleMember: React.FC<ISingleMember> = ({
 						<p>{height}</p>
 						<br></br>
 						<p>{weight}</p>
+						<br></br>
+
+						<p>{usual_spot_on_stage}</p>
 						<br></br>
 					</div>
 				</div>
