@@ -5,12 +5,17 @@ const SingleMember: React.FC<ISingleMember> = ({
 	id,
 	name,
 	birthdate,
-	nickname,
-	birthplace,
+	place_of_birth,
+	role,
 	height,
-	bloodtype,
-	position,
+	weight,
+	eye_color,
+	hair_color,
+	distinguishing_features,
+	usual_spot_on_stage,
+	former_band,
 	img,
+	position,
 }) => {
 	return (
 		<section className={`members-info-container ${position}`}>
@@ -20,17 +25,17 @@ const SingleMember: React.FC<ISingleMember> = ({
 			<div className="members-text">
 				<div className="members-left">
 					<div className="members-left-text">
-						<p>Birth name:</p>
+						<p>Name:</p>
 						<br></br>
-						<p>Birth date:</p>
+						<p>Birthdate:</p>
 						<br></br>
-						<p>Nickname:</p>
+						<p>Place of birth:</p>
 						<br></br>
-						<p>Birth place:</p>
+						<p>Role:</p>
 						<br></br>
 						<p>Height:</p>
 						<br></br>
-						<p>Blood type:</p>
+						<p>Weight:</p>
 						<br></br>
 					</div>
 				</div>
@@ -40,13 +45,13 @@ const SingleMember: React.FC<ISingleMember> = ({
 						<br></br>
 						<p>{birthdate} </p>
 						<br></br>
-						<p>{nickname}</p>
+						<p>{place_of_birth}</p>
 						<br></br>
-						<p>{birthplace}</p>
+						<p>{role}</p>
 						<br></br>
 						<p>{height}</p>
 						<br></br>
-						<p>{bloodtype}</p>
+						<p>{weight}</p>
 						<br></br>
 					</div>
 				</div>

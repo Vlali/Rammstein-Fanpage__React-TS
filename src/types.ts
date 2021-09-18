@@ -9,8 +9,8 @@ export interface IInitialState {
 	total: number;
 	totalAlbums: number;
 	songs: [];
-	url: 'https://albumdata.herokuapp.com/albumData';
-	membersUrl: 'https://albumdata.herokuapp.com/memberDetails';
+	albumDataUrl: 'https://rammstein-data-api.herokuapp.com/albumData';
+	membersUrl: 'https://rammstein-data-api.herokuapp.com/memberDetails';
 	songsUrl: 'https://albumdata.herokuapp.com/results';
 	searchTerm: string;
 	rightSlide: () => void;
@@ -43,12 +43,16 @@ export interface IAlbumDataPlusAmount extends IAlbumData {
 export interface IMemberData {
 	id: number;
 	name: string;
-	birthname: string;
 	birthdate: string;
-	nickname: string;
-	birthplace: string;
+	place_of_birth: string;
+	role: string;
 	height: string;
-	bloodtype: string;
+	weight: string;
+	eye_color: string;
+	hair_color: string;
+	distinguishing_features: string;
+	usual_spot_on_stage: string;
+	former_band: string;
 	img: string;
 }
 export interface ISingleMember extends IMemberData {

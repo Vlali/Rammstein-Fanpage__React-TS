@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useReducer, useState } from 'react';
 import reducer from './reducer';
-import { IInitialState, IAlbumData, IAlbumDataPlusAmount } from './types';
+import { IInitialState, IAlbumDataPlusAmount } from './types';
 
 const initialState: IInitialState = {
 	isSidebarOpen: false,
@@ -13,8 +13,8 @@ const initialState: IInitialState = {
 	total: 0,
 	totalAlbums: 0,
 	songs: [],
-	url: 'https://albumdata.herokuapp.com/albumData',
-	membersUrl: 'https://albumdata.herokuapp.com/memberDetails',
+	albumDataUrl: 'https://rammstein-data-api.herokuapp.com/albumData',
+	membersUrl: 'https://rammstein-data-api.herokuapp.com/memberDetails',
 	songsUrl: 'https://albumdata.herokuapp.com/results',
 	searchTerm: '',
 	rightSlide: () => {},
@@ -65,7 +65,7 @@ const AppProvider = ({ children }: any) => {
 	const fetchData = async () => {
 		dispatch({ type: 'LOADING' });
 		try {
-			const response = await fetch(state.url);
+			const response = await fetch(state.albumDataUrl);
 			const fetchData = await response.json();
 			await fetchData.forEach(
 				(element: IAlbumDataPlusAmount) => (element.amount = 0)
