@@ -450,6 +450,7 @@ a {
 	display: flex;
 }
 .members-left {
+	margin-left: 20px;
 	width: 50%;
 	display: flex;
 	justify-content: center;
